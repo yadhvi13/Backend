@@ -26,3 +26,46 @@ but RYAN DAHL ne google chrome ke v8 engine ko js warpper me create krte environ
 #how to use Module?
 -CJS
 -ESM
+
+#difference between http and https module
+--they are set of protocols provided by to run internet
+-- to use http there is a package called http
+
+##what is NPM?
+node package manager --firstly name
+--where all the packages available here
+
+#what is module---jo core npm me installed aata hai
+#what is packages -- jo npm se download krte hai.
+
+#jb bhi kisi ko install krte hai toh wo dependencies bn jate hai
+--npm install (packagename)
+ex- npm install one-liner-joke
+
+--npm uninstall (packagename)
+ex- npm uninstall one-liner-joke
+
+#how to install particular package
+npm i accessibility@3.0.9
+
+#dependencies are those, jiske dependencies and package ki dependencies hai.
+
+#devdependencies are those packages jo sirf devlopment me kaam ayenge jb app bn jayega ur upload ho jayega, tb hum in packages ko use nhi kr rhe honge.
+
+##Aisi koi bhi cheez ko devdependencies nhi bnayenge jinhe deploy or upload hone ke baad bhi use hona hai.
+
+## What are scripts?
+
+start and test scripts are already created in , when node and npm has install, thjey had created this. 
+#and agr jo humne commands khudse bnai hai , unhe chlane ke liye hume run lgana pdhta hai,
+
+##we can create whatever commands we want to create [CUSTOM SCRIPTS]
+
+##framework->>>>> it give us flow, how the work is done
+##library->>>>>>> it give us TOOL, and do the work.
+
+
+##What is Express.js
+-express js ek npm package hai
+-express is a framework
+-it manages everything from receiving the request and giving the response.
