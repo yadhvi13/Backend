@@ -30,4 +30,24 @@ etc....
 2.) POST -> when we want to send data to server
 3.) PATCH -> when data is already present on server and need to update that data on server
 4.) DELETE -> to delete already present data on from server.
+
+```
+
+```
+## CREATING TODO 
+// ARRAY OF NOTES--------
+const notes = [{
+    title: "my first note",
+    description: "this is my first note",
+},
+{
+    title: "my second note",
+    description: "this is my second note",
+}
+    ]
+
+### using POSTMAN for devloping the API, as it work as frontend and see if the data is fetching on browser or not  
+
+### we will also create MIDDLEWARE , as jo bhi data postman se body ke andar RAW format me , use READABLE format me bna dega, isliye us data ko middleware ke through pdh jayega.
+
 ```

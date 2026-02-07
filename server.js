@@ -1,4 +1,4 @@
-// creating server file in server.js file
+// creating server file in server.js file in root directory
 // it is to start server in our application
 
 const app = require('./src/app');
