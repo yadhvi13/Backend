@@ -1,9 +1,8 @@
-// for using express we need to require it first
-const express = require('express');
+// creating server file in server.js file
+// it is to start server in our application
 
-// creating server using calling express function
-const app =express();
+const app = require('./src/app');
 
 app.listen(3000,()=>{
-    console.log('server is running on port 3000');   
+    console.log('server is running on port 3000');
 })
