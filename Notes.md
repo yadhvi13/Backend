@@ -6,6 +6,7 @@
 5.) listening and starting server on PORT 3000 using app.listen(); 
 6.) to access data coming from frontend - use req method
 7.) and to access data from server to frontend - use res method
+8.) npm i mongoose -package for database to connect to server
 ```
 
 ```
@@ -50,4 +51,28 @@ const notes = [{
 
 ### we will also create MIDDLEWARE , as jo bhi data postman se body ke andar RAW format me , use READABLE format me bna dega, isliye us data ko middleware ke through pdh jayega.
 
+```
+
+```
+### For Database we are using MONGODB
+yogeeta1312_db_user
+yogeeta1312
+
+DATABASE operations
+C - create
+R - read
+U - update
+D - delete
+```
+
+NGrbb2o4RDTSkJUp
+
+```
+await mongoose.connect - database is a powerful method
+
+## what is creating schema?
+- Database ko btana ki database me jo data store hoga wo kaisa dikhega
+
+## find - arary return krti hai
+## findOne - object return krti h
 ```

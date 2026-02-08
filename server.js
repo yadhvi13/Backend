@@ -1,8 +1,14 @@
-// creating server file in server.js file in root directory
-// it is to start server in our application
+// to start server
 
-const app = require('./src/app');
+const app = require("./src/app");
+
+const connectDB = require("./src/db/db")
+
+
+connectDB()
+
 
 app.listen(3000,()=>{
-    console.log('server is running on port 3000');
+    console.log("server is runnning on port 3000");
+    
 })

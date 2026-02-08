@@ -1,47 +1,47 @@
-// creating server file in src folder
-// it is to create a server in our application
-
+// to create server
 const express = require('express');
 
+const noteModel = require("./models/note.model")
+
 const app = express();
-// using middleware to parse the body of the request
+
+// middleware
 app.use(express.json());
 
+// notes = title and description
 
-// creating api for notes
 
-const notes = []
-// titles and description of notes
+/*
+POST notes, GET notes, DELETE notes, PATCH notes
+*/
 
-app.post('/notes',(req,res)=>{
-    // console.log(req.body);
+app.post("/notes", async(req,res)=>{
+    const data = req.body  //data is in object
 
-    notes.push(req.body);
-
-    res.status(201).json({
-        message: "note created successfully"
-    }); //for success
+    await noteModel.create({
+        title: data.title,
+        description: data.description,
+    })
     
+    res.status(201).json({
+        message: "note created"
+    })
 })
 
-// creating API for user, jitne bhi notes usne create kre honge wo data show ho jayega
-app.get('/notes', (req,res)=>{
+
+app.get("/notes", async(req,res)=>{
+    // databse me jitne bhi notes created hue hai yha laake get krdo
+    // find always return ARRAY
+    const notes = await noteModel.findOne({
+        title:"my first interview"
+    })
+
     res.status(200).json({
         message: "notes fetched successfully",
         notes: notes
     })
+
 })
 
-// creating API for DELETING USER NOTE from Server
-app.delete('/notes/:index', (req,res)=>{
-    // dekhne ke liye ki index me kya value aayi h
-    const index = req.params.index
 
-    delete notes[index]
-
-    res.status(200).json({
-        message: "note deleted successfully"
-    })
-})
-
-module.exports = app;
+module.exports = app
